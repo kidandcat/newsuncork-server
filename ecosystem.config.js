@@ -17,7 +17,7 @@ module.exports = {
       host: "suncork.net",
       ref: "origin/master",
       repo: "git@github.com:kidandcat/newsuncork-server.git",
-      path: "/root/newsuncork",
+      path: "/root/newsuncork-server",
       "post-deploy":
         "npm install && npm build && pm2 reload ecosystem.config.js --env production"
     }
