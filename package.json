@@ -22,7 +22,7 @@
   "scripts": {
     "test": "yarn run eslint && yarn run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
-    "start": "./setup-front.sh && node src/",
+    "start": "node src/",
     "mocha": "mocha test/ --recursive --exit"
   },
   "dependencies": {

@@ -19,7 +19,7 @@ module.exports = {
       repo: "git@github.com:kidandcat/newsuncork-server.git",
       path: "/root/newsuncork-server",
       "post-deploy":
-        "npm install && npm build && pm2 reload ecosystem.config.js --env production"
+        "./setup-front.sh && npm install && npm build && pm2 reload ecosystem.config.js --env production"
     }
   }
 };
