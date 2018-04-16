@@ -5,4 +5,4 @@ git pull origin master
 yarn
 yarn build
 cd ..
-cd newsuncork-server/source
+cd newsuncork-server/current
