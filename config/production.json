@@ -1,6 +1,6 @@
 {
   "host": "suncork.net",
-  "port": 24,
+  "port": 80,
   "public": "../../newsuncork/dist/",
   "postgres": "postgres://suncork:@localhost:26257/suncork_server"
 }
