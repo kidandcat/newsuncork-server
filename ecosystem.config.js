@@ -18,8 +18,7 @@ module.exports = {
       ref: "origin/master",
       repo: "git@github.com:kidandcat/newsuncork-server.git",
       path: "/root/newsuncork-server",
-      "post-deploy":
-        "./setup-front.sh && yarn && pm2 reload ecosystem.config.js --env production"
+      "post-deploy": "yarn && pm2 reload ecosystem.config.js --env production"
     }
   }
 };
