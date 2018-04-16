@@ -1,8 +1,8 @@
 #! /bin/bash
-cd ..
+cd ../..
 cd newsuncork
 git pull origin master
 npm install
 npm run build
 cd ..
-cd newsuncork-server
+cd newsuncork-server/source
