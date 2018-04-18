@@ -65,10 +65,11 @@ setTimeout(() => {
     })
     .then(res => {
       if (res.length === 0) {
+        console.log("creating user olga");
         app.service("users").create({
           email: "olga",
           password: "shestakova"
         });
       }
     });
-}, 3000);
+}, 6000);
