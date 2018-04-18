@@ -2,5 +2,29 @@
   "host": "localhost",
   "port": 3030,
   "public": "../public",
-  "postgres": "postgres://suncork:@localhost:26257/suncork_server"
+  "postgres": "postgres://suncork:@localhost:26257/suncork_server",
+  "authentication": {
+    "secret": "2da8274c748d6b2a8259b4227639a741b0c987bc94d251399acd3d753dd1626784d2413a3fb75c337b3e7bbd5c50159dd0e3280aeb5d8cd452d140bee3f1446fb5cd6492dd6c8824ff14aabd222f10346acce827658076de3718ad8631b9023067a932dcba5b97aea722c207946bbb75a6be112e3db9e11780fa895ae1d9e5c753bb48dfdd3b414545aad9ac449c1b5370f4ffb6a3f8192c19a9aadf06a46bba253de8cb68c2a320b4b5007e7484a6b0320de0b1566efd4888856231b296d287699ef863f649a1e658702544d5f1c08384dfc207dfc88b19880acd7741bd18aba569990e048127fc3bbac1df588af834fc4f0bb1251b15c0649538378f47f4d0",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
 }
