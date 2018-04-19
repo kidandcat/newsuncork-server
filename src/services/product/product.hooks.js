@@ -1,14 +1,12 @@
-
-
 module.exports = {
   before: {
     all: [],
     find: [],
     get: [],
-    create: [],
-    update: [],
-    patch: [],
-    remove: []
+    create: [authenticate("jwt")],
+    update: [authenticate("jwt")],
+    patch: [authenticate("jwt")],
+    remove: [authenticate("jwt")]
   },
 
   after: {
