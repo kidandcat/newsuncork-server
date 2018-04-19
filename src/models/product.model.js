@@ -8,13 +8,10 @@ module.exports = function(app) {
   const product = sequelizeClient.define(
     "product",
     {
-      _id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
-        primaryKey: true
-      },
       id: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        primaryKey: true,
+        unique: true
       },
       name: {
         type: Sequelize.STRING
