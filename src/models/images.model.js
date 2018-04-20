@@ -5,22 +5,16 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function(app) {
   const sequelizeClient = app.get("sequelizeClient");
-  const product = sequelizeClient.define(
-    "product",
+  const images = sequelizeClient.define(
+    "images",
     {
       id: {
         type: Sequelize.STRING,
         primaryKey: true,
         unique: true
       },
-      name: {
-        type: Sequelize.STRING
-      },
-      description: {
+      data: {
         type: Sequelize.TEXT
-      },
-      images: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
       }
     },
     {
@@ -32,11 +26,11 @@ module.exports = function(app) {
     }
   );
 
-  product.associate = function(models) {
+  images.associate = function(models) {
     // eslint-disable-line no-unused-vars
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return product;
+  return images;
 };
