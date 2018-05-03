@@ -5,30 +5,18 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function(app) {
   const sequelizeClient = app.get("sequelizeClient");
-  const product = sequelizeClient.define(
-    "product",
+  const options = sequelizeClient.define(
+    "options",
     {
-      id: {
-        type: Sequelize.STRING,
-        primaryKey: true,
-        unique: true
-      },
-      name: {
-        type: Sequelize.STRING,
+      product: {
+        type: DataTypes.STRING,
         allowNull: false
       },
-      description: {
-        type: Sequelize.TEXT,
-        allowNull: false
+      optionName: {
+        type: Sequelize.STRING
       },
-      images: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
-      },
-      price: {
-        type: Sequelize.FLOAT
-      },
-      options: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+      optionValue: {
+        type: Sequelize.STRING
       }
     },
     {
@@ -40,11 +28,11 @@ module.exports = function(app) {
     }
   );
 
-  product.associate = function(models) {
+  options.associate = function(models) {
     // eslint-disable-line no-unused-vars
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return product;
+  return options;
 };
