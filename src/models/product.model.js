@@ -21,6 +21,9 @@ module.exports = function(app) {
       },
       images: {
         type: Sequelize.ARRAY(Sequelize.STRING)
+      },
+      price: {
+        type: Sequelize.FLOAT
       }
     },
     {
